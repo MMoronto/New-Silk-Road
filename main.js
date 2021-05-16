@@ -16,7 +16,7 @@ function init(){
         target: 'openlayers-map'
     })
 
-    map.on('click', function(e){
-        console.log(e.coordinate);
+    // map.on('click', function(e){
+    //     console.log(e.coordinate);
     })
 }
