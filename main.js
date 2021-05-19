@@ -16,15 +16,16 @@ function init(){
         target: 'openlayers-map'
     })
 
-    // map.on('click', function(e){
-    //     console.log(e.coordinate);
-    // })
     // African Projects GeoJSON
+    const afriProjStyle = function(feature){
+        console.log(feature);
+    }
     const afriProjLayer = new ol.layer.Vector({
         source: new ol.source.Vector({
             format: new ol.format.GeoJSON(),
             url: 'data/African_projects.geojson'
-        })
+        }),
+        style: afriProjStyle
     })
     map.addLayer(afriProjLayer);
 }
