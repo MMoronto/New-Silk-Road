@@ -18,5 +18,5 @@ function init(){
 
     // map.on('click', function(e){
     //     console.log(e.coordinate);
-    })
+    // })
 }
