@@ -19,4 +19,12 @@ function init(){
     // map.on('click', function(e){
     //     console.log(e.coordinate);
     // })
+    // African Projects GeoJSON
+    const afriProjLayer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            format: new ol.format.GeoJSON(),
+            url: 'data/African_projects.geojson'
+        })
+    })
+    map.addLayer(afriProjLayer);
 }
