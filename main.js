@@ -1,7 +1,6 @@
 window.onload = init;
 
 function init(){  
-    // ##Specify view##
     const map = new ol.Map({
         view: new ol.View({
             center: [-110, 40],
@@ -18,12 +17,41 @@ function init(){
 
     // African Projects GeoJSON
     const afriProjStyle = function(feature){
-        console.log(feature);
+        let projID = feature.get('ID');
+        let projIDString = projID.toString();
+        const styles = [
+                new ol.style.Style({
+                    image: new ol.style.Circle({
+                        fill: new ol.style.Fill({
+                            color: [77, 219, 105, 0.6]
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: [6, 125, 34, 1],
+                            width: 2
+                        }),
+                        radius: 12
+                    }),
+                    text: new ol.style.Text({
+                        text: projIDString,
+                        scale: 1.5,
+                        fill: new ol.style.Fill({
+                            color: [232, 26, 26, 1]
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: [232, 26, 26, 1],
+                            width: 0.3
+                        })
+                    })
+                })
+            // ]
+        ]
+        return styles
     }
+
     const afriProjLayer = new ol.layer.Vector({
         source: new ol.source.Vector({
             format: new ol.format.GeoJSON(),
-            url: 'data/African_projects.geojson'
+            url: './data/African_projects.geojson'
         }),
         style: afriProjStyle
     })
