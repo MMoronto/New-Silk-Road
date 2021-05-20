@@ -56,4 +56,14 @@ function init(){
         style: afriProjStyle
     })
     map.addLayer(afriProjLayer);
+
+    // Map Features Click Logic
+    const navElements = document.querySelector('.column-navigation')
+    const projNameElement = document.getElementById('projectname');
+    const projImageElement = document.getElementById('projectimage');
+    const mapView = map.getView();
+
+    map.on('singleclick', function(evt){
+        map.forEachFeatureAtPixel()
+    })
 }
