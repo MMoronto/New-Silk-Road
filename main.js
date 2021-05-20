@@ -66,7 +66,7 @@ function init(){
     map.on('singleclick', function(evt){
         map.forEachFeatureAtPixel(evt.pixel, function(feature, layer){
             let featureName = feature.get('Projectname');
-            let navElement = navElements.children;
+            let navElement = navElements.children.namedItem(featureName);
             console.log(navElement);
             // mainLogic(feature, )
         })
