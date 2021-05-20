@@ -68,11 +68,14 @@ function init(){
             let featureName = feature.get('Projectname');
             let navElement = navElements.children.namedItem(featureName);
             console.log(navElement);
-            // mainLogic(feature, )
+            mainLogic(feature, navElement)
         })
     })
 
     function mainLogic(feature, clickedAnchorElement){
-                
+         // Re-assign active class to clicked element
+        let currentActiveStyledElement = document.querySelector('.active');
+        currentActiveStyledElement.className = currentActiveStyledElement.className.replace('active', '');   
+        clickedAnchorElement.className = 'active';  
     }    
 }
