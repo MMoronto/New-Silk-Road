@@ -64,6 +64,8 @@ function init(){
     const mapView = map.getView();
 
     map.on('singleclick', function(evt){
-        map.forEachFeatureAtPixel()
+        map.forEachFeatureAtPixel(evt.pixel, function(feature, layer){
+            console.log(feature);
+        })
     })
 }
