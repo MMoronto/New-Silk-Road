@@ -67,7 +67,6 @@ function init(){
         map.forEachFeatureAtPixel(evt.pixel, function(feature, layer){
             let featureName = feature.get('Projectname');
             let navElement = navElements.children.namedItem(featureName);
-            console.log(navElement);
             mainLogic(feature, navElement)
         })
     })
