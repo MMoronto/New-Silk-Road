@@ -5,7 +5,7 @@ function init(){
         view: new ol.View({
             center: [-110, 40],
             zoom: 0.50,
-            extent: [-2928417.2600459913, -5356355.993575926, 6819329.638905743, 5231577.155380443],
+            extent: [-5837786.856305197, -8622668.2727381, 10266905.484192658, 9308650.467931474],
         }),
         layers: [
             new ol.layer.Tile({
@@ -64,6 +64,7 @@ function init(){
     const mapView = map.getView();
 
     map.on('singleclick', function(evt){
+        console.log(evt.coordinate);
         map.forEachFeatureAtPixel(evt.pixel, function(feature, layer){
             let featureName = feature.get('Projectname');
             let navElement = navElements.children.namedItem(featureName);
@@ -77,8 +78,9 @@ function init(){
         currentActiveStyledElement.className = currentActiveStyledElement.className.replace('active', '');   
         clickedAnchorElement.className = 'active';
 
-        // Chhange the view based on the feature
+        // Change the view based on the feature
         let featureCoordinates = feature.get('geometry').getCoordinates();
-        console.log(featureCoordinates);
+        mapView.animate({center: featureCoordinates}, {zoom: 5})
+
     }    
 }
