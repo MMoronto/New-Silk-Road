@@ -120,7 +120,7 @@ function init(){
 
         let featureName = feature.get('Projectname'); //from JSON file
         let featureImage = feature.get('ProjectImage'); //from JSON file
-        console.log(featureName)
-        console.log(featureImage)
+        projNameElement.innerHTML = 'Name of the project: ' + featureName
+        projImageElement.setAttribute('src', './data/Projectimages/' + featureImage + '.jpg');
     }    
 }
