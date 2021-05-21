@@ -48,6 +48,37 @@ function init(){
         return styles
     }
 
+    const styleForSelect = function(feature){
+        let projID = feature.get('ID');
+        let projIDString = projID.toString();
+        const styles = [
+                new ol.style.Style({
+                    image: new ol.style.Circle({
+                        fill: new ol.style.Fill({
+                            color: [247, 26, 10, 0.5]
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: [6, 125, 34, 1],
+                            width: 2
+                        }),
+                        radius: 12
+                    }),
+                    text: new ol.style.Text({
+                        text: projIDString,
+                        scale: 1.5,
+                        fill: new ol.style.Fill({
+                            color: [87, 9, 9, 1]
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: [87, 9, 9, 1],
+                            width: 0.5
+                        })
+                    })
+                })
+        ]
+        return styles
+    }
+
     const afriProjLayer = new ol.layer.Vector({
         source: new ol.source.Vector({
             format: new ol.format.GeoJSON(),
@@ -81,6 +112,8 @@ function init(){
         // Change the view based on the feature
         let featureCoordinates = feature.get('geometry').getCoordinates();
         mapView.animate({center: featureCoordinates}, {zoom: 5})
+
+        feature.setStyle(styleForSelect)
 
     }    
 }
