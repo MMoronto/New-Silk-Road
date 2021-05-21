@@ -95,7 +95,6 @@ function init(){
     const mapView = map.getView();
 
     map.on('singleclick', function(evt){
-        console.log(evt.coordinate);
         map.forEachFeatureAtPixel(evt.pixel, function(feature, layer){
             let featureName = feature.get('Projectname');
             let navElement = navElements.children.namedItem(featureName);
@@ -113,6 +112,10 @@ function init(){
         let featureCoordinates = feature.get('geometry').getCoordinates();
         mapView.animate({center: featureCoordinates}, {zoom: 5})
 
+        let afriProjFeatures = afriProjLayer.getSource().getFeatures();
+        afriProjFeatures.forEach(function(feature){
+            feature.setStyle(afriProjStyle);
+        })
         feature.setStyle(styleForSelect)
 
     }    
