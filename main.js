@@ -96,7 +96,7 @@ function init(){
 
     map.on('singleclick', function(evt){
         map.forEachFeatureAtPixel(evt.pixel, function(feature, layer){
-            let featureName = feature.get('Projectname');
+            let featureName = feature.get('Projectname'); //from json file
             let navElement = navElements.children.namedItem(featureName);
             mainLogic(feature, navElement)
         })
@@ -118,5 +118,9 @@ function init(){
         })
         feature.setStyle(styleForSelect)
 
+        let featureName = feature.get('Projectname'); //from JSON file
+        let featureImage = feature.get('ProjectImage'); //from JSON file
+        console.log(featureName)
+        console.log(featureImage)
     }    
 }
