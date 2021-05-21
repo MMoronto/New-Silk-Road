@@ -75,6 +75,10 @@ function init(){
          // Re-assign active class to clicked element
         let currentActiveStyledElement = document.querySelector('.active');
         currentActiveStyledElement.className = currentActiveStyledElement.className.replace('active', '');   
-        clickedAnchorElement.className = 'active';  
+        clickedAnchorElement.className = 'active';
+
+        // Chhange the view based on the feature
+        let featureCoordinates = feature.get('geometry').getCoordinates();
+        console.log(featureCoordinates);
     }    
 }
