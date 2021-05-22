@@ -129,8 +129,11 @@ function init(){
     for(let anchorNavElement of anchorNavElements){
         anchorNavElement.addEventListener('click', function(e){
             let clickedAnchorElement = e.currentTarget;
+            let clickedAnchorElementID = clickedAnchorElement.id;
             let afriProjFeatures = afriProjLayer.getSource().getFeatures();
-
+            afriProjFeatures.forEach(function(feature){
+                console.log(feature.get('Projectname')); // From JSON file
+            })
         })
     } 
 }
