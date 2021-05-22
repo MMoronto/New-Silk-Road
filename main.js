@@ -122,5 +122,9 @@ function init(){
         let featureImage = feature.get('ProjectImage'); //from JSON file
         projNameElement.innerHTML = 'Name of the project: ' + featureName
         projImageElement.setAttribute('src', './data/Projectimages/' + featureImage + '.jpg');
-    }    
+    }
+    
+    // Navigation Button Logic
+    const anchorNavElements = document.querySelectorAll('.column-navigation > a');
+    console.log(anchorNavElements);
 }
