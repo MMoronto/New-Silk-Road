@@ -126,5 +126,11 @@ function init(){
     
     // Navigation Button Logic
     const anchorNavElements = document.querySelectorAll('.column-navigation > a');
-    console.log(anchorNavElements);
+    for(let anchorNavElement of anchorNavElements){
+        anchorNavElement.addEventListener('click', function(e){
+            let clickedAnchorElement = e.currentTarget;
+            let afriProjFeatures = afriProjLayer.getSource().getFeatures();
+
+        })
+    } 
 }
