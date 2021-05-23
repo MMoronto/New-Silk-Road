@@ -118,6 +118,11 @@ function init(){
         })
         feature.setStyle(styleForSelect)
 
+        // Home Element : Change content in the menu to HOME
+        if(clickedAnchorElement.id === 'Home'){
+            console.log(clickedAnchorElement.id);
+        }
+
         let featureName = feature.get('Projectname'); //from JSON file
         let featureImage = feature.get('ProjectImage'); //from JSON file
         projNameElement.innerHTML = 'Name of the project: ' + featureName
@@ -137,6 +142,11 @@ function init(){
                         mainLogic(feature, clickedAnchorElement);
                     }
             })
+
+            // Home Navigation Case
+            if(clickedAnchorElementID === 'Home'){
+                mainLogic(undefined, clickedAnchorElement)
+            }
         })
     } 
 }
