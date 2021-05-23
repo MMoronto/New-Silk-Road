@@ -1,9 +1,10 @@
 window.onload = init;
 
 function init(){  
+    const afriCenterCoordinate = [-110, 40]
     const map = new ol.Map({
         view: new ol.View({
-            center: [-110, 40],
+            center: afriCenterCoordinate,
             zoom: 0.50,
             extent: [-5837786.856305197, -8622668.2727381, 10266905.484192658, 9308650.467931474],
         }),
@@ -120,8 +121,10 @@ function init(){
 
         // Home Element : Change content in the menu to HOME
         if(clickedAnchorElement.id === 'Home'){
-            console.log(clickedAnchorElement.id);
-        }
+            mapView.animate({center: afriCenterCoordinate}, {zoom: 4})
+            projNameElement.innerHTML = 'African Infrastructure Projects funded by the Chinese';
+            projImageElement.setAttribute('src', './data/Projectimages/Home_Image.jpg');
+        };
 
         let featureName = feature.get('Projectname'); //from JSON file
         let featureImage = feature.get('ProjectImage'); //from JSON file
