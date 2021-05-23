@@ -132,7 +132,10 @@ function init(){
             let clickedAnchorElementID = clickedAnchorElement.id;
             let afriProjFeatures = afriProjLayer.getSource().getFeatures();
             afriProjFeatures.forEach(function(feature){
-                console.log(feature.get('Projectname')); // From JSON file
+                let featureProjName = feature.get('Projectname'); // From JSON file
+                    if(clickedAnchorElementID === featureProjName){
+                        mainLogic(feature, clickedAnchorElement);
+                    }
             })
         })
     } 
