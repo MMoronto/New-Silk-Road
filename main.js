@@ -109,9 +109,7 @@ function init(){
         currentActiveStyledElement.className = currentActiveStyledElement.className.replace('active', '');   
         clickedAnchorElement.className = 'active';
 
-        // Change the view based on the feature
-        let featureCoordinates = feature.get('geometry').getCoordinates();
-        mapView.animate({center: featureCoordinates}, {zoom: 5})
+
 
         let afriProjFeatures = afriProjLayer.getSource().getFeatures();
         afriProjFeatures.forEach(function(feature){
@@ -124,12 +122,15 @@ function init(){
             mapView.animate({center: afriCenterCoordinate}, {zoom: 4})
             projNameElement.innerHTML = 'African Infrastructure Projects funded by the Chinese';
             projImageElement.setAttribute('src', './data/Projectimages/Home_Image.jpg');
-        };
-
-        let featureName = feature.get('Projectname'); //from JSON file
-        let featureImage = feature.get('ProjectImage'); //from JSON file
-        projNameElement.innerHTML = 'Name of the project: ' + featureName
-        projImageElement.setAttribute('src', './data/Projectimages/' + featureImage + '.jpg');
+        } else {
+            feature.setStyle(styleForSelect)
+            let featureCoordinates = feature.get('geometry').getCoordinates();
+            mapView.animate({center: featureCoordinates}, {zoom: 5})
+            let featureName = feature.get('Projectname'); //from JSON file
+            let featureImage = feature.get('ProjectImage'); //from JSON file
+            projNameElement.innerHTML = 'Name of the project: ' + featureName
+            projImageElement.setAttribute('src', './data/Projectimages/' + featureImage + '.jpg');
+        }
     }
     
     // Navigation Button Logic
