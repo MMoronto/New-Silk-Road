@@ -110,19 +110,19 @@ function init(){
         clickedAnchorElement.className = 'active';
 
 
-
         let afriProjFeatures = afriProjLayer.getSource().getFeatures();
         afriProjFeatures.forEach(function(feature){
             feature.setStyle(afriProjStyle);
         })
-        feature.setStyle(styleForSelect)
 
         // Home Element : Change content in the menu to HOME
         if(clickedAnchorElement.id === 'Home'){
             mapView.animate({center: afriCenterCoordinate}, {zoom: 4})
             projNameElement.innerHTML = 'African Infrastructure Projects funded by the Chinese';
             projImageElement.setAttribute('src', './data/Projectimages/Home_Image.jpg');
-        } else {
+        } 
+        // Change view and content in the menu based on the feature
+        else {
             feature.setStyle(styleForSelect)
             let featureCoordinates = feature.get('geometry').getCoordinates();
             mapView.animate({center: featureCoordinates}, {zoom: 5})
