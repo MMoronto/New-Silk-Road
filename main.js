@@ -109,7 +109,7 @@ function init(){
         currentActiveStyledElement.className = currentActiveStyledElement.className.replace('active', '');   
         clickedAnchorElement.className = 'active';
 
-
+        // Default style for all features
         let afriProjFeatures = afriProjLayer.getSource().getFeatures();
         afriProjFeatures.forEach(function(feature){
             feature.setStyle(afriProjStyle);
@@ -125,7 +125,7 @@ function init(){
         else {
             feature.setStyle(styleForSelect)
             let featureCoordinates = feature.get('geometry').getCoordinates();
-            mapView.animate({center: featureCoordinates}, {zoom: 5})
+            mapView.animate({center: featureCoordinates}, {zoom: 7})
             let featureName = feature.get('Projectname'); //from JSON file
             let featureImage = feature.get('ProjectImage'); //from JSON file
             projNameElement.innerHTML = 'Name of the project: ' + featureName
@@ -153,4 +153,7 @@ function init(){
             }
         })
     } 
+
+    //Features Hover Logic
+    const popoverTextElement = document.getElementByIdmentById('popover-text')
 }
