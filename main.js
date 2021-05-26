@@ -164,6 +164,11 @@ function init(){
     map.addOverlay(popoverTextLayer);
 
     map.on('pointermove', function(evt){
-        console.log(evt.pixel);
+        let isFeatureAtPixel = map.hasFeatureAtPixel(evt.pixel);
+        if(isFeatureAtPixel){
+            console.log('there is a feature');
+        } else {
+          console.log('no feature'); 
+        }
     })
 }
