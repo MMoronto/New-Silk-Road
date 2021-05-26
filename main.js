@@ -155,7 +155,7 @@ function init(){
     } 
 
     //Features Hover Logic
-    const popoverTextElement = document.getElementByIdmentById('popover-text');
+    const popoverTextElement = document.getElementById('popover-text');
     const popoverTextLayer = new ol.Overlay({
         element: popoverTextElement,
         positioning: 'bottom-center',
