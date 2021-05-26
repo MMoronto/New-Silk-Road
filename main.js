@@ -117,7 +117,7 @@ function init(){
 
         // Home Element : Change content in the menu to HOME
         if(clickedAnchorElement.id === 'Home'){
-            mapView.animate({center: afriCenterCoordinate}, {zoom: 4})
+            mapView.animate({center: afriCenterCoordinate}, {zoom: 4.8})
             projNameElement.innerHTML = 'African Infrastructure Projects funded by the Chinese';
             projImageElement.setAttribute('src', './data/Projectimages/Home_Image.jpg');
         } 
@@ -125,7 +125,7 @@ function init(){
         else {
             feature.setStyle(styleForSelect)
             let featureCoordinates = feature.get('geometry').getCoordinates();
-            mapView.animate({center: featureCoordinates}, {zoom: 7})
+            mapView.animate({center: featureCoordinates}, {zoom: 6})
             let featureName = feature.get('Projectname'); //from JSON file
             let featureImage = feature.get('ProjectImage'); //from JSON file
             projNameElement.innerHTML = 'Name of the project: ' + featureName
@@ -155,5 +155,9 @@ function init(){
     } 
 
     //Features Hover Logic
-    const popoverTextElement = document.getElementByIdmentById('popover-text')
+    const popoverTextElement = document.getElementByIdmentById('popover-text');
+    const popoverTextLayer = new ol.Overlay({
+        element: popoverTextElement,
+        positioning: 'bottom-center'
+    })
 }
