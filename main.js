@@ -158,6 +158,12 @@ function init(){
     const popoverTextElement = document.getElementByIdmentById('popover-text');
     const popoverTextLayer = new ol.Overlay({
         element: popoverTextElement,
-        positioning: 'bottom-center'
+        positioning: 'bottom-center',
+        stopEvent: false
+    })
+    map.addOverlay(popoverTextLayer);
+
+    map.on('pointermove', function(evt){
+        console.log(evt.pixel);
     })
 }
