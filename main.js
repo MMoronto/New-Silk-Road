@@ -167,7 +167,9 @@ function init(){
         let isFeatureAtPixel = map.hasFeatureAtPixel(evt.pixel);
         if(isFeatureAtPixel){
             let featureAtPixel = map.getFeaturesAtPixel(evt.pixel);
-            console.log(featureAtPixel[0].get('Projectname'));
+            let featureName = featureAtPixel[0].get('Projectname');
+            popoverTextLayer.setPosition(evt.coordinate);
+            popoverTextElement.innerHTML = featureName;
         } else {
           console.log('no feature'); 
         }
