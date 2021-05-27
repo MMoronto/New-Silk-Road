@@ -171,7 +171,7 @@ function init(){
             popoverTextLayer.setPosition(evt.coordinate);
             popoverTextElement.innerHTML = featureName;
         } else {
-          console.log('no feature'); 
+          popoverTextLayer.setPosition(undefined);
         }
     })
 }
