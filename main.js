@@ -167,7 +167,7 @@ function init(){
         let isFeatureAtPixel = map.hasFeatureAtPixel(evt.pixel);
         if(isFeatureAtPixel){
             let featureAtPixel = map.getFeaturesAtPixel(evt.pixel);
-            console.log(featureAtPixel);
+            console.log(featureAtPixel[0].get('Projectname'));
         } else {
           console.log('no feature'); 
         }
