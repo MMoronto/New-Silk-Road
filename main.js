@@ -166,8 +166,8 @@ function init(){
     map.on('pointermove', function(evt){
         let isFeatureAtPixel = map.hasFeatureAtPixel(evt.pixel);
         if(isFeatureAtPixel){
-            let isFeatureAtPixel = map.getFeatureAtPixel(evt.pixel);
-
+            let featureAtPixel = map.getFeaturesAtPixel(evt.pixel);
+            console.log(featureAtPixel);
         } else {
           console.log('no feature'); 
         }
