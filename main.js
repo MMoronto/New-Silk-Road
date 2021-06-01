@@ -170,6 +170,7 @@ function init(){
             let featureName = featureAtPixel[0].get('Projectname');
             popoverTextLayer.setPosition(evt.coordinate);
             popoverTextElement.innerHTML = featureName;
+            map.getViewport().style.cursor = 'pointer';
         } else {
           popoverTextLayer.setPosition(undefined);
         }
