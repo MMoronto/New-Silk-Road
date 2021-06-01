@@ -70,3 +70,8 @@ body{
     height: 60%;
     border-radius: 10px;
 }
+
+#popover-text{
+    background-color: #9c9a9a;
+    font-size: 18px;
+}
