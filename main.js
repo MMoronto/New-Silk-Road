@@ -173,6 +173,7 @@ function init(){
             map.getViewport().style.cursor = 'pointer';
         } else {
           popoverTextLayer.setPosition(undefined);
+          map.getViewport().style.cursor = '';
         }
     })
 }
