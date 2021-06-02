@@ -41,7 +41,7 @@ body{
 
 .column-navigation a:hover{
     /* background-color: #000; */
-    color: #000;
+    color: rgb(65, 63, 63);
 }
 
 .active{
