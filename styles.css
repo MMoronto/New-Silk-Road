@@ -34,17 +34,18 @@ body{
 .column-navigation{
     display: block;
     text-align: center;
-    padding: 0px;
+    padding: 10px;
     color: white;
     font-size: 35px;
 }
 
 .column-navigation a:hover{
-    background-color: #000;
+    /* background-color: #000; */
+    color: #000;
 }
 
 .active{
-    background-color: rgb(191, 121, 47);
+    color: rgb(191, 121, 47);
 }
 
 .column-menu{
