@@ -99,7 +99,7 @@ body{
         text-align: center
     }
 
-    .column-navigation{
+    .column-navigation a {
         display: inline;
     }
 
