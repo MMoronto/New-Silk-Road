@@ -103,7 +103,7 @@ body{
         display: inline;
     }
 
-    #projectname a {
+    #projectname{
        height: 5%;
        padding: 20px;
        text-align: center;
