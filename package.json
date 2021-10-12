@@ -1,0 +1,23 @@
+{
+  "name": "new-silk-road",
+  "version": "1.0.0",
+  "description": "Interactive Map of initial and proposed phases of new Rail Infrastructure Project in Nigeria. The project is funded by loans from the Export-Import Bank of China (about $2.8 billion as of 2021) and by minority funding from the Nigerian Government. A JavaScript, OpenLayers, CSS & HTML Application.",
+  "main": "main.js",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMoronto/New-Silk-Road.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MMoronto/New-Silk-Road/issues"
+  },
+  "homepage": "https://github.com/MMoronto/New-Silk-Road#readme"
+}
