@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "deploy": "gh-pages -d"
+    "deploy": "gh-pages -d New-Silk-Road"
   },
   "repository": {
     "type": "git",
