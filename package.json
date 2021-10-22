@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "deploy": "gh-pages -d deploy"
+    "deploy": "gh-pages -d deploy",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
