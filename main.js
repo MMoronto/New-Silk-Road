@@ -16,7 +16,7 @@ function init(){
         target: 'openlayers-map'
     })
 
-    // African Projects GeoJSON
+    // Nigerian Projects GeoJSON
     const afriProjStyle = function(feature){
         let projID = feature.get('ID');
         let projIDString = projID.toString();
