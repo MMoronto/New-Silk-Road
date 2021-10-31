@@ -118,7 +118,7 @@ function init(){
         // Home Element : Change content in the menu to HOME
         if(clickedAnchorElement.id === 'Home'){
             mapView.animate({center: afriCenterCoordinate}, {zoom: 4.8})
-            projNameElement.innerHTML = 'Nigerian Rail Infrastructure Projects funded by Chinese Institutions';
+            projNameElement.innerHTML = 'Nigerian Railway Projects financed by Chinese Institutions';
             projImageElement.setAttribute('src', './data/Projectimages/Home_Image.jpg');
         } 
         // Change view and content in the menu based on the feature
