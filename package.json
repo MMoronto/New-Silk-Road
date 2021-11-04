@@ -1,7 +1,7 @@
 {
   "name": "new-silk-road",
   "version": "1.0.0",
-  "description": "Interactive Map of initial and proposed phases of new Rail Projects in Nigeria. The project is funded by loans from the Export-Import Bank of China (about $2.8 billion as of 2021) and by minority funding from the Nigerian Government. A JavaScript, OpenLayers, CSS & HTML Application.",
+  "description": "Interactive Map of initial and proposed phases of new Rail Projects in Nigeria. The project is funded by loans from the Export-Import(ExIm) Bank of China (about $2.8 billion as of 2021) and by minority funding from the Nigerian Government. A JavaScript, OpenLayers, CSS & HTML Application.",
   "main": "main.js",
   "dependencies": {
     "gh-pages": "^3.2.3",
